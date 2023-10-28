@@ -18,7 +18,7 @@ export default [
         component: StudentAddComponent,
       },
       {
-        path: ':id/student',
+        path: ':idStudent',
         component: StudentViewComponent,
       },
     ],
