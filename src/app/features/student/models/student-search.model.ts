@@ -1,7 +1,9 @@
+import { dateToTimestamp } from "src/app/core/helpers";
+
 export interface IStudentSearch {
   name: string;
   gender: string;
-  birthDay: Date;
+  birthDay: number;
   physics: number;
   maths: number;
   english: number;
@@ -14,7 +16,7 @@ export interface IStudentSearch {
 export class StudentSearch implements IStudentSearch {
   name: string;
   gender: string;
-  birthDay: Date;
+  birthDay: number;
   physics: number;
   maths: number;
   english: number;
@@ -26,9 +28,9 @@ export class StudentSearch implements IStudentSearch {
   constructor() {
     this.name = '';
     this.gender = '';
-    this.birthDay = new Date();
-    this.physics = 0;
-    this.maths = 0;
-    this.english = 0;
+    this.birthDay = null as unknown as number;
+    this.physics = null as unknown as number;
+    this.maths = null as unknown as number;
+    this.english = null as unknown as number;
   }
 }

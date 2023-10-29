@@ -1,9 +1,17 @@
 import { Component } from '@angular/core';
+import { StudentFormComponent } from '../student-form/student-form.component';
+import { ModeEnum } from '../../enum';
+import { StudentTableComponent } from '../student-table/student-table.component';
 
 @Component({
   selector: 'app-student-search',
   standalone: true,
-  imports: [],
-  template: ` <h1>Hello Student Search</h1> `,
+  imports: [StudentFormComponent, StudentTableComponent],
+  template: `
+  <!-- <app-student-form [mode]="mode"></app-student-form> -->
+    <app-student-table></app-student-table>
+  `,
 })
-export class StudentSearchComponent {}
+export class StudentSearchComponent {
+  mode = ModeEnum.search;
+}

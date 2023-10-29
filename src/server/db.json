@@ -4,7 +4,7 @@
       "id": 1,
       "name": "arun",
       "gender": "Male",
-      "birthDay": "10/10/2000",
+      "birthDay": 971116800,
       "physics": 88,
       "maths": 87,
       "english": 78
@@ -13,7 +13,7 @@
       "id": 2,
       "name": "rajesh",
       "gender": "Male",
-      "birthDay": "25/01/2000",
+      "birthDay": 948672000,
       "physics": 96,
       "maths": 100,
       "english": 95
@@ -22,7 +22,7 @@
       "id": 3,
       "name": "moorthy",
       "gender": "Male",
-      "birthDay": "05/11/2000",
+      "birthDay": 973372800,
       "physics": 89,
       "maths": 90,
       "english": 70
@@ -31,7 +31,7 @@
       "id": 4,
       "name": "raja",
       "gender": "Male",
-      "birthDay": "23/03/2001",
+      "birthDay": 985449600,
       "physics": 30,
       "maths": 25,
       "english": 40
@@ -40,7 +40,7 @@
       "id": 5,
       "name": "usha",
       "gender": "Female",
-      "birthDay": "15/05/2001",
+      "birthDay":  990662400,
       "physics": 67,
       "maths": 45,
       "english": 78
@@ -49,7 +49,7 @@
       "id": 6,
       "name": "priya",
       "gender": "Female",
-      "birthDay": "07/08/1999",
+      "birthDay": 933859200,
       "physics": 56,
       "maths": 46,
       "english": 78
@@ -58,7 +58,7 @@
       "id": 7,
       "name": "Sundar",
       "gender": "Male",
-      "birthDay": "12/09/2000",
+      "birthDay": 968208000,
       "physics": 12,
       "maths": 67,
       "english": 67
@@ -67,7 +67,7 @@
       "id": 8,
       "name": "Kavitha",
       "gender": "Female",
-      "birthDay": "19/07/2000",
+      "birthDay": 964662000,
       "physics": 78,
       "maths": 71,
       "english": 67
@@ -76,7 +76,7 @@
       "id": 9,
       "name": "Dinesh",
       "gender": "Male",
-      "birthDay": "01/10/2000",
+      "birthDay": 970771200,
       "physics": 56,
       "maths": 45,
       "english": 67
@@ -85,7 +85,7 @@
       "id": 10,
       "name": "Hema",
       "gender": "Female",
-      "birthDay": "11/11/2000",
+      "birthDay": 973990400,
       "physics": 71,
       "maths": 90,
       "english": 23
@@ -94,7 +94,7 @@
       "id": 11,
       "name": "Gowri",
       "gender": "Female",
-      "birthDay": "12/12/2000",
+      "birthDay":  976214400,
       "physics": 100,
       "maths": 100,
       "english": 100
@@ -103,7 +103,7 @@
       "id": 12,
       "name": "Ram",
       "gender": "Male",
-      "birthDay": "27/02/2002",
+      "birthDay": 1014758400,
       "physics": 78,
       "maths": 55,
       "english": 47
@@ -112,7 +112,7 @@
       "id": 13,
       "name": "Murugan",
       "gender": "Male",
-      "birthDay": "08/02/2000",
+      "birthDay": 949363200,
       "physics": 34,
       "maths": 89,
       "english": 78
@@ -121,7 +121,7 @@
       "id": 14,
       "name": "Jenifer",
       "gender": "Female",
-      "birthDay": "12/06/2000",
+      "birthDay": 960883200,
       "physics": 67,
       "maths": 88,
       "english": 90
