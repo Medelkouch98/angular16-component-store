@@ -37,7 +37,7 @@ export interface StudentsState {
 }
 
 export const initialStudentsState: StudentsState = {
-  students: null as unknown as PaginatedApiResponse<IStudent>,
+  students: [] as unknown as PaginatedApiResponse<IStudent>,
   searchForm: new StudentSearch(),
   sort: {
     _sort: ['physics', 'maths', 'english'],
@@ -133,8 +133,8 @@ export class StudentStore extends ComponentStore<StudentsState> {
     })
   );
 
-  studentsSearch = this.effect((_) =>
-    this.students$.pipe(
+  studentsSearch = this.effect((trigger$) =>
+  trigger$.pipe(
       withLatestFrom(this.sort$, this.searchForm$, this.pageEvent$),
       take(1),
       switchMap(([_, sort, searchForm, pageEvent]) => {
@@ -154,8 +154,8 @@ export class StudentStore extends ComponentStore<StudentsState> {
     )
   );
 
-  getStudent = this.effect((_) =>
-    this.student$.pipe(
+  getStudent = this.effect((trigger$) =>
+    trigger$.pipe(
       withLatestFrom(this.store.pipe(select(RouterParamsSelector))),
       switchMap(([_, params]: [any, Params]) =>
         this.studentService.getStudent(params['idstudent']).pipe(

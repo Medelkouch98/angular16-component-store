@@ -11,4 +11,7 @@ import { StudentService } from '../services/student.service';
   template: ` <router-outlet /> `,
 })
 export class StudentComponent {
+  constructor(private studentStore: StudentStore) {
+    this.studentStore.studentsSearch();
+  }
 }

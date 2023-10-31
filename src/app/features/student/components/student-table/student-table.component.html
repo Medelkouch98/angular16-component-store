@@ -71,7 +71,7 @@
     </table>
 
     <mat-paginator
-      [length]="_.students?.meta?.total"
+      [length]="$any(_.students).count"
       [pageSize]="$any(_.page)._limit"
       [pageIndex]="$any(_.page)._page"
       (page)="changePage($event)"

@@ -41,9 +41,10 @@ export class StudentTableComponent implements OnInit {
   sort$: Observable<{ [key: string]: string[] }> = this.studentsStore.sort$;
 
   constructor(private studentsStore: StudentStore) {
-    console.log('StudentTableComponent');
-    this.students$.pipe(takeUntilDestroyed(), take(1)).subscribe((data) => {
-      console.log('students$', data);
+    this.students$.pipe(takeUntilDestroyed()).subscribe({
+      next: (data) => {
+        console.log('StudentTableComponent.students$', data);
+      },
     });
   }
 
