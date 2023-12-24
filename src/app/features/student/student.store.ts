@@ -67,6 +67,7 @@ export class StudentStore extends ComponentStore<StudentsState> {
     private toaster: ToastrService
   ) {
     super(initialStudentsState);
+    console.log('state data', initialStudentsState);
   }
 
   private setWsError = (
@@ -134,17 +135,17 @@ export class StudentStore extends ComponentStore<StudentsState> {
   );
 
   studentsSearch = this.effect((trigger$) =>
-  trigger$.pipe(
+    trigger$.pipe(
       withLatestFrom(this.sort$, this.searchForm$, this.pageEvent$),
       take(1),
       switchMap(([_, sort, searchForm, pageEvent]) => {
         return this.studentService
           .searchStudents(generateUrl([sort, pageEvent, searchForm]))
           .pipe(
+            take(1),
             tap((students: PaginatedApiResponse<IStudent>) => {
-              console.log('students store', students);
-
               this.patchState({ students });
+              console.log('state studentsSearch', initialStudentsState);
             }),
             catchError((error: HttpErrorResponse) =>
               this.setWsError(error, 'searchClientsError')

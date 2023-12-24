@@ -3,7 +3,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, PageEvent } from '@angular/material/paginator';
 import { IStudent, Student } from '../../models';
 import { StudentStore } from '../../student.store';
-import { Observable, take } from 'rxjs';
+import { Observable, take, tap } from 'rxjs';
 import { MatSortModule, Sort } from '@angular/material/sort';
 import { PaginatedApiResponse } from 'src/app/shared/models';
 import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
@@ -34,18 +34,15 @@ import { TimestampToDatePipe } from 'src/app/shared/pipes/date.pipe';
   ],
 })
 export class StudentTableComponent implements OnInit {
-  displayedColumns: string[] = Object.keys(Student);
+  displayedColumns: string[] = ['id', 'name', 'gender', 'birthDay', 'physics', 'maths', 'english', 'action'];
   students$: Observable<PaginatedApiResponse<IStudent>> =
     this.studentsStore.students$;
   page$: Observable<{ [key: string]: number }> = this.studentsStore.pageEvent$;
   sort$: Observable<{ [key: string]: string[] }> = this.studentsStore.sort$;
 
   constructor(private studentsStore: StudentStore) {
-    this.students$.pipe(takeUntilDestroyed()).subscribe({
-      next: (data) => {
-        console.log('StudentTableComponent.students$', data);
-      },
-    });
+    console.log('displayedColumns', this.displayedColumns);
+    
   }
 
   ngOnInit() {}
